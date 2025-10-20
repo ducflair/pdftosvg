@@ -13,7 +13,8 @@ permissions:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    
     permissions:
       contents: write
       issues: write
@@ -50,11 +51,12 @@ jobs:
             libasound2 \
             xvfb
 
-      - name: Set up virtual display
-        run: |
-          export DISPLAY=:99
-          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-          sleep 3
+      - name: Set up virtual display (Xvfb)
+        uses: GabrielBB/xvfb-action@v1
+        with:
+          run: true
+
+      # The 'Set up virtual display' step has been removed as the action above handles it.
 
       - name: Install dependencies
         run: bun install
@@ -65,7 +67,7 @@ jobs:
       - name: Debug WASM Environment
         run: |
           echo "Node version: $(node --version)"
-          echo "Display: $DISPLAY"
+          echo "Display: $DISPLAY" # This will now be set by the xvfb-action
           echo "Checking runtime files:"
           ls -la dist/runtime/_framework/ || echo "Framework directory not found"
           ls -la runtime/_framework/ || echo "Source runtime directory not found"
@@ -73,7 +75,7 @@ jobs:
           env | grep -E "(DISPLAY|WASM|NODE)" || echo "No WASM-specific env vars"
 
       - name: Test built version
-        run: DISPLAY=:99 bun test tests/convert-built.spec.ts
+        run: bun test tests/convert-built.spec.ts
         env:
           # Node.js options for WASM
           NODE_OPTIONS: '--max-old-space-size=4096'
