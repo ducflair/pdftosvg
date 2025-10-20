@@ -35,7 +35,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ducflair/pdf-into-svg.git"
+    "url": "https://github.com/ducflair/pdftosvg.git"
   },
   "publishConfig": {
     "access": "public"
