@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
+  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  <InvariantGlobalization>false</InvariantGlobalization>
+  <WasmEnableWebcil>true</WasmEnableWebcil>
+  <WasmGenerateRuntimeBundle>true</WasmGenerateRuntimeBundle>
+  <DebugType>portable</DebugType>
+  <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../pdftosvg.net/src/PdfToSvg/PdfToSvg.csproj" />
+  </ItemGroup>
+
+</Project>

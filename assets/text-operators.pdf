@@ -1,0 +1,178 @@
+%PDF-1.7
+
+xref
+0 6
+0000000000 65535 f
+0000000182 00000 n
+0000000233 00000 n
+0000000297 00000 n
+0000000651 00000 n
+0000000773 00000 n
+trailer
+<< /Root 1 0 R  /Size 6 >>
+
+1 0 obj << /Type /Catalog  /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages  /Kids [ 3 0 R ]  /Count 1 >> endobj
+
+3 0 obj 
+<<
+   /Type /Page
+   /Parent 2 0 R
+   /Resources <<
+      /Font <<
+         /F1 << /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+      >>
+      /ExtGState <<
+         /GS1 << /Font [4 0 R 15] >>
+      >>
+   >>
+   /MediaBox [ 0 0 594.96 841.92 ]
+   /Contents [ 5 0 R ]
+   /Rotate 0
+>>
+endobj
+
+4 0 obj
+<<
+   /Type /Font
+   /Subtype /Type1
+   /BaseFont /Courier-Bold
+   /Encoding /WinAnsiEncoding
+>>
+endobj
+
+5 0 obj << /Length 2299 >>
+stream
+
+   0 0 0 rg
+   1 0 0 RG
+   
+   % 0.98 -0.02 0.02 0.98 0 0 cm
+
+   BT
+      /F1 12 Tf
+      %70 750 Td
+      1.7 0 0 1.7 30 750 Tm
+      
+      (Multiple spans, same line:) Tj
+      [ -500 (Abc) -1000 (def) 500 ] TJ
+      (ghi) Tj
+      ( jkl) Tj
+      150 Tz
+      [ -1000 (mno) ] TJ
+      100 Tz
+      (x) Tj
+      /F1 24 Tf
+      (larger) Tj
+      
+      % Negative font size
+      1.7 0 0 1.7 565 740 Tm
+      /F1 -12 Tf
+      (Multiple spans, same line:) Tj
+      [ -500 (Abc) -1000 (def) 500 ] TJ
+      (ghi) Tj
+      ( jkl) Tj
+      150 Tz
+      [ -1000 (mno) ] TJ
+      100 Tz
+      (x) Tj
+      /F1 -24 Tf
+      (larger) Tj
+      
+      /F1 12 Tf
+      
+      1 0 0 1 70 690 Tm
+      26 TL
+      
+      q
+         10 Tc
+         (  with  extra char space) Tj
+      Q
+      
+      T*
+      q
+         10 Tw
+         (  with  extra word space) Tj
+      Q
+      
+      T*
+      q
+         10 Tw
+         (This is ) Tj
+         5 Ts
+         (superscripted) Tj
+         0 Ts
+         ( and ) Tj
+         -5 Ts
+         (subscripted) Tj
+      Q
+      
+      % Note about the ExtGState test case:
+      % It renders as intended in Pdf.js and Adobe Reader, but not in Pdfium.
+      % The latter seems to handle the first Font argument in ExtGState as a
+      % name instead of an indirect reference, as specified in
+      % PDF spec 1.7, p.137.
+      
+      /GS1 gs
+      (' operator with Courier specified in ExtGState) '
+      /F1 12 Tf
+      
+      5 5 (" operator with extra space) "
+      0 Tw
+      0 Tc
+      40 TL
+      
+      T*
+      1 Tr
+      /F1 30 Tf
+      35 TL
+      (Outlined text) Tj
+      
+      T*
+      2 Tr
+      (Outlined and filled text) Tj
+      
+      T*
+      3 Tr
+      (invisible text) Tj
+      
+      T*
+      0 Tr
+      (filled again) Tj
+      
+      0.5 0 0 0.5 211 440 Tm
+      (smaller) Tj
+      
+      1 0 0 1 70 440 Tm
+      200 Tz
+      (wide ) '
+      50 Tz
+      (and narrow) '
+      
+   ET
+   
+   70 750 m
+   400 750 l
+   S
+   
+   /F1 80 Tf
+   150 Tz
+   [5 3] 6 d
+   2 w
+
+   % Rotated text
+   120 Tz
+   /F1 20 Tf
+   BT
+      0.574 0.819 -0.819 0.574 420 380 Tm
+      (Rotated) Tj
+      100 0 Td
+      [(60) -800 (degrees)] TJ
+   ET
+
+endstream
+endobj
+
+startxref
+8
+%%EOF

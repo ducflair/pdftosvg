@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist
+runtime
+bin
+obj
+
+# macOS
+.DS_Store

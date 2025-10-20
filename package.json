@@ -1,0 +1,54 @@
+{
+  "name": "pdftosvg",
+  "version": "0.0.0-development",
+  "description": "Client-side PDF to SVG conversion powered by PdfToSvg.NET compiled to WebAssembly.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "runtime"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "wasm:prepare": "node ./scripts/build-wasm.js",
+    "ci": "npm run wasm:prepare && npm run build && npm run test"
+  },
+  "keywords": [
+    "pdf",
+    "svg",
+    "webassembly",
+    "wasm",
+    "c#",
+    "converter",
+    "pdf2svg"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ducflair/pdftosvg.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/github": "^12.0.0",
+    "@semantic-release/npm": "^13.1.1",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "semantic-release": "^25.0.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
