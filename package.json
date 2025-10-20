@@ -1,5 +1,5 @@
 {
-  "name": "pdftosvg",
+  "name": "pdf-into-svg",
   "version": "0.0.0-development",
   "description": "Client-side PDF to SVG conversion powered by PdfToSvg.NET compiled to WebAssembly.",
   "type": "module",
@@ -35,7 +35,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ducflair/pdftosvg.git"
+    "url": "https://github.com/ducflair/pdf-into-svg.git"
   },
   "publishConfig": {
     "access": "public"
